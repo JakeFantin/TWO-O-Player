@@ -1,17 +1,17 @@
-class Question
+# frozen_string_literal: true
 
-  def initialize()
-    @num1 = rand(20) + 1
-    @num2 = rand(20) + 1
+class Question
+  def initialize
+    @num1 = rand(1..20)
+    @num2 = rand(1..20)
     @answer = (@num1 + @num2).to_s
   end
-  
-  def getQuestion
-    return "What does #{@num1} plus #{@num2} equal?"
+
+  def ask_question
+    "What does #{@num1} plus #{@num2} equal?"
   end
 
-  def getAnswer (num)
+  def check_answer(num)
     @answer === num
   end
-
 end

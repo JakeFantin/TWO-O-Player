@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Player
   attr_accessor :name, :life
   def initialize(name)
@@ -6,10 +8,10 @@ class Player
   end
 
   def score
-    return "#{life}/3"
+    "#{life}/3"
   end
 
   def loss
-    @life -= 1;
+    @life -= 1
   end
 end
